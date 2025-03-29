@@ -1,0 +1,113 @@
+/* Dark Theme Calculator Styles */
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --calculator-bg: #1e1e1e;
+  --display-bg: #252525;
+  --button-bg: #333;
+  --button-hover: #444;
+  --operator-bg: #ff9500;
+  --operator-hover: #ffaa33;
+  --equal-bg: #28a745;
+  --equal-hover: #218838;
+  --clear-bg: #dc3545;
+  --clear-hover: #c82333;
+  --border-color: #333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: var(--calculator-bg);
+  border: 1px solid var(--border-color);
+}
+
+.calculator:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+}
+
+.display {
+  font-size: 2rem;
+  height: 60px;
+  background-color: var(--display-bg);
+  color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: left;
+  direction: ltr;
+  padding: 10px;
+}
+
+.btn {
+  font-size: 1.2rem;
+  height: 60px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-light {
+  background-color: var(--button-bg);
+  color: white;
+}
+
+.btn-light:hover {
+  background-color: var(--button-hover);
+  color: white;
+}
+
+.btn-warning {
+  background-color: var(--operator-bg);
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: var(--operator-hover);
+}
+
+.btn-success {
+  background-color: var(--equal-bg);
+}
+
+.btn-success:hover {
+  background-color: var(--equal-hover);
+}
+
+.btn-danger {
+  background-color: var(--clear-bg);
+}
+
+.btn-danger:hover {
+  background-color: var(--clear-hover);
+}
+
+.btn-secondary {
+  background-color: #555;
+}
+
+.btn-secondary:hover {
+  background-color: #666;
+}
+
+@media (max-width: 576px) {
+  .calculator {
+    width: 100%;
+  }
+  
+  .btn {
+    height: 50px;
+    font-size: 1rem;
+  }
+}
