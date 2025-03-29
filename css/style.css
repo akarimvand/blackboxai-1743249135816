@@ -1,6 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #1a1a1a;
+    color: #f8f9fa;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -11,18 +12,21 @@ body {
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
 }
 
 .calculator:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     transform: translateY(-5px);
 }
 
 .display {
     font-size: 2rem;
     height: 60px;
-    background-color: #f8f9fa;
-    border: none;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
     border-radius: 8px;
     text-align: left;
     direction: ltr;
@@ -37,11 +41,13 @@ body {
 }
 
 .btn-light {
-    background-color: #f8f9fa;
+    background-color: #444;
+    color: #fff;
 }
 
 .btn-light:hover {
-    background-color: #e9ecef;
+    background-color: #555;
+    color: #fff;
 }
 
 .btn-warning {
