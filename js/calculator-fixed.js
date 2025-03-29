@@ -47,7 +47,7 @@ function chooseOperation(op) {
 }
 
 function calculate() {
-    if (operation === undefined) return;
+    if (operation === undefined || currentInput === '') return;
     
     const prev = parseFloat(previousInput);
     const current = parseFloat(currentInput);
@@ -91,12 +91,14 @@ function calculate() {
         currentInput = result.toString();
         operation = undefined;
         previousInput = '';
+        resetScreen = true;
         updateDisplay();
         
     } catch (error) {
         currentInput = 'خطا در محاسبه';
         updateDisplay();
     }
+
 }
 
 // Keyboard support
